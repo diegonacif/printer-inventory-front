@@ -1,7 +1,14 @@
-import { Card, Form, Button } from 'react-bootstrap'
+
 import Logo from '../../assets/logo.png'
 
+import { Form } from '@unform/web';
+
 import { Container, Content } from './styles'
+
+import Input from '../../components/inputs'
+
+
+
 
 
 
@@ -13,25 +20,27 @@ const SignIn: React.FC = () => {
 
         <Container>
             <Content>
+                <img src={Logo} alt="logo ink" />
+                <Form>
 
-                <img src={Logo} alt="" />
-                <Form >
-                    <Form.Group controlId="formBasicEmail" >
+                    <h1>Login</h1>
+                    <Input
+                        name="email"
+                        placeholder="E-mail *"
 
-                        <Form.Control type="email" placeholder="Enter email" />
+                    />
 
-                    </Form.Group>
+                    <Input
+                        name="password"
+                        type="password"
+                        placeholder="Senha *"
+                    />
 
-                    <Form.Group controlId="formBasicPassword">
 
-                        <Form.Control type="password" placeholder="Password" />
-                    </Form.Group>
 
-                    <Button variant="primary" type="submit">
-                        Submit
-                    </Button>
+
+
                 </Form>
-
 
             </Content>
 
