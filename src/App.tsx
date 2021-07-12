@@ -1,21 +1,20 @@
-import 'bootstrap/dist/css/bootstrap.min.css';
-import GlobalStyle from './styles/global'
+import React from 'react';
 import { BrowserRouter } from 'react-router-dom'
-import Route from './routes'
+import GlobalStyle from './styles/global'
 
+import AppProvider from './hooks'
+import Routes from './routes'
 
-function App() {
-  return (
+const App: React.FC = () => (
     <>
-      <BrowserRouter>
-        <GlobalStyle />
-        <Route />
+        <BrowserRouter>
+            <GlobalStyle />
+            <AppProvider>
+                <Routes />
+            </AppProvider>
 
-      </BrowserRouter>
-
-
+        </BrowserRouter>
     </>
-  )
-}
+)
 
 export default App;

@@ -1,12 +1,8 @@
-import styled from "styled-components";
-import { shade } from 'polished'
-
-
+import styled from 'styled-components';
+import { shade } from 'polished';
 
 export const Container = styled.button`
-
-
-  background: #4CAF50;
+    background: #4CAF50;
     height: 50px;
     border-radius: 5px;/*  borda arredondada*/
     border: 0;
@@ -22,8 +18,4 @@ export const Container = styled.button`
     &:hover {
         background: ${shade(0.3, '#4CAF50')}; /* escurecer 20% a cor do botão*/
     }
-
-
-
-
-`
+`;
